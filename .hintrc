@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "-webkit-text-size-adjust"
+        ]
+      }
+    ]
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not and_chr <= 105",
+    "not chrome <= 104",
+    "not edge <= 104",
+    "not firefox <= 104",
+    "not safari <= 15.6",
+    "not samsung <= 18"
+  ]
+}
