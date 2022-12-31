@@ -11,7 +11,15 @@ const Main = () => {
       setMovies(response.data.results);
     });
   }, []);
-  console.log(movie);
+//   console.log(movie);
+
+const truncatedString = (str, num) => {
+  if(str?.length > num) {
+    return str.slice(0, num) + '...'
+  } else {
+    return str
+  }
+}
 
   return (
     <div className="w-full h-[550px] text-white">
@@ -33,7 +41,7 @@ const Main = () => {
             </button>
           </div>
           <p className="text-gray-400 text-sm">Released:{movie?.release_date} </p>
-          <p className="w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%]">{movie?.overview}</p>
+          <p className="w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%]">{truncatedString(movie?.overview, 150)}</p>
         </div>
       </div>
     </div>
